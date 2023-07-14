@@ -79,3 +79,7 @@ li:first-letter {
 .weather-temperature .active:hover {
     text-decoration: none;
 }
+small {
+    text-shadow: 0px opx 4px black;
+    color: #dfdfdf;
+}

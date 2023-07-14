@@ -1,9 +1,10 @@
 body {
     font-family: arial, sans-serif;
     background-image: url("sun.jpg");
-        color: gray;
+    color: gray;
         background-size: cover;
         background-attachment: fixed;
+    background-position: bottom;
 }
 
 h1 {
@@ -44,7 +45,7 @@ li:first-letter {
     border: 1px solid #dadde1;
     border-radius: 5px;
     background-color: #fff;
-        background-color: rgb(225, 225, 225, 70%);
+    background-color: rgb(225, 225, 225, 70%);
 }
 
 .overview {

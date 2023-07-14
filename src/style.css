@@ -1,6 +1,9 @@
 body {
     font-family: arial, sans-serif;
-    background-image: url("../sunflower.jpg");
+    background-image: url("sun.jpg");
+        color: gray;
+        background-size: cover;
+        background-attachment: fixed;
 }
 
 h1 {
@@ -40,6 +43,8 @@ li:first-letter {
     padding: 20px;
     border: 1px solid #dadde1;
     border-radius: 5px;
+    background-color: #fff;
+        background-color: rgb(225, 225, 225, 70%);
 }
 
 .overview {

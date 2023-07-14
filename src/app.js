@@ -1,3 +1,4 @@
+
 function formatDate(timestamp) {
     let date = new Date(timestamp);
     let hours = date.getHours();
@@ -39,26 +40,16 @@ function displayForecast(response) {
     forecast.forEach(function (forecastDay, index) {
         if (index < 6) {
             forecastHTML =
-                forecastHTML +
-                `
-      <div class="col-2">
-        <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
-        <img
-          src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon
-                }@2x.png"
-          alt=""
-          width="42"
-        />
-        <div class="weather-forecast-temperatures">
-          <span class="weather-forecast-temperature-max"> ${Math.round(
-                    forecastDay.temp.max
-                )}° </span>
-          <span class="weather-forecast-temperature-min"> ${Math.round(
-                    forecastDay.temp.min
-                )}° </span>
-        </div>
-      </div>
-  `;
+                forecastHTML + `<div class="col-2 p-0">
+                                    <div class="bg-white rounded p-2 m-2 text-center">
+                                        <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
+                                        <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="" width="42">
+                                        <div class="weather-forecast-temperatures">
+                                            <span class="weather-forecast-temperature-max"> ${Math.round(forecastDay.temp.max)}° </span>
+                                            <span class="weather-forecast-temperature-min"> ${Math.round(forecastDay.temp.min)}° </span>
+                                        </div>
+                                    </div>
+                                </div>`;
         }
     });
 

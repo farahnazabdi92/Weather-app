@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
 
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
@@ -39,7 +39,8 @@
                         <div class="clearfix weather-temperature">
                             <img src="" alt="Clear" id="icon" class="float-left" />
                             <div class="float-left">
-                                <strong id="temperature"></strong><span class="units"> °C</span>
+                                <strong id="temperature"></strong><span class="units"><a href="#" id="celsius-link" class="active">°C</a> |
+                                    <a href="#" id="fahrenheit-link">°F</a></span>
                             </div>
                         </div>
                     </div>
@@ -47,17 +48,19 @@
                         <ul>
                             <li>Humidity: <span id="humidity"></span>%</li>
                             <li>Wind: <span id="wind"></span> km/h</li>
-                            </ul>
+                        </ul>
                     </div>
                 </div>
-                <div class="weather-forecast" id="forecast"></div>
             </div>
             <small>
                 <a href="https://github.com/farahnazabdi92/Weather-app">Open-source code</a> , by Farahnaz Abdi </small>
         </div>
-        </div>
-        <script src="src/app.js"></script>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="src/app.js"></script>
 </body>
 
 </html>
 
+
+    

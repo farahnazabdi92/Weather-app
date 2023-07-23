@@ -72,9 +72,9 @@ function displayTemperature(response) {
     let dateElement = document.querySelector("#date");
     let iconElement = document.querySelector("#icon");
 
-    let celsiusTemperature = response.data.main.temp;
 
-    temperatureElement.innerHTML = Math.round(celsiusTemperature);
+
+    temperatureElement.innerHTML = Math.round(response.data.main.temp);
     cityElement.innerHTML = response.data.name;
     descriptionElement.innerHTML = response.data.weather[0].description;
     humidityElement.innerHTML = response.data.main.humidity;
@@ -85,7 +85,7 @@ function displayTemperature(response) {
         `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
    //iconElement.setAttribute("alt", response.data.weather[0].description);
-
+    celsiusTemperature = response.data.main.temp;
     //getForecast(response.data.coord);
 
 }

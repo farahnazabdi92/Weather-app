@@ -101,7 +101,9 @@ function handleSubmit(event) {
     search(cityInputElement.value);
 }
 function displayFahrenheitTemperature(event) {
+
     event.preventDefault();
+    console.log(event);
     let temperatureElement = document.querySelector("#temperature");
 
     celsiusLink.classList.remove("active");
@@ -111,14 +113,17 @@ function displayFahrenheitTemperature(event) {
 }
 
 function displayCelsiusTemperature(event) {
+
     event.preventDefault();
+    console.log(event);
     celsiusLink.classList.add("active");
     fahrenheitLink.classList.remove("active");
     let temperatureElement = document.querySelector("#temperature");
     temperatureElement.innerHTML = Math.round(celsiusTemperature);
+
 }
 
-let celsiusTemperature = null;
+//let celsiusTemperature = null;
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);

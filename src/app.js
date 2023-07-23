@@ -72,9 +72,9 @@ function displayTemperature(response) {
     let dateElement = document.querySelector("#date");
     let iconElement = document.querySelector("#icon");
 
-    //let celsiusTemperature = response.data.main.temp;
+    let celsiusTemperature = response.data.main.temp;
 
-    temperatureElement.innerHTML = Math.round(response.data.main.temp);
+    temperatureElement.innerHTML = Math.round(celsiusTemperature);
     cityElement.innerHTML = response.data.name;
     descriptionElement.innerHTML = response.data.weather[0].description;
     humidityElement.innerHTML = response.data.main.humidity;
@@ -84,10 +84,10 @@ function displayTemperature(response) {
         "src",
         `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
-    //iconElement.setAttribute("alt", response.data.weather[0].description);
+    iconElement.setAttribute("alt", response.data.weather[0].description);
 
     //getForecast(response.data.coord);
-    celsiusTemperature = response.data.main.temp;
+
 }
 
 function search(city) {
@@ -138,3 +138,4 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 
 search("Tehran");
+displayForecast();
